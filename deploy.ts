@@ -41,6 +41,16 @@ async function main() {
       throw new Error("no abi.");
   }
 
+  console.log('abi',testAbi, 'abi')
+
+  // ✅ Log Full ABI
+console.log("Full ABI:", JSON.stringify(testAbi, null, 2));
+
+// ✅ Log Only 'items' If They Exist
+testAbi.forEach((item, index) => {
+    console.log(`Item ${index + 1}:`, item);
+});
+
   // Connect the new contract instance:
   const myTestContract = new Contract(testAbi, deployResponse.contract_address, provider);
   console.log("✅ Test Contract connected at =", myTestContract.address);
