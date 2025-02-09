@@ -1,3 +1,4 @@
+"use client"
 import { useConnect, useDisconnect, useAccount } from '@starknet-react/core';
 
 const WalletBar: React.FC = () => {
